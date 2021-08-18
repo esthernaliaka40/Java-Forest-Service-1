@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="models.AnimalLocationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-18T18:43:17" hostname="karuu-HP-EliteBook-8470p" time="0.041">
-  <properties/>
-  <testcase name="GetsStringNameOfLocationCorrectly()" classname="models.AnimalLocationTest" time="0.034"/>
-  <testcase name="GetIdOfAreaOfLocation()" classname="models.AnimalLocationTest" time="0.002"/>
-  <testcase name="GetsLocationInstantiatesCorrectly()" classname="models.AnimalLocationTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
