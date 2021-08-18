@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AnimalLocationTest {
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws Exception {
     }
 
     @AfterEach
