@@ -117,7 +117,7 @@ body {
 </style>
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">Forest<b>Service</b></a>
+		<a class="navbar-brand" href="/">Forest<b>Service</b></a>
 		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
 			<span class="navbar-toggler-icon"></span>
 			<span class="icon-bar"></span>
@@ -128,15 +128,15 @@ body {
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/about">About</a></li>
 			<li class="dropdown">
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="#">Create A Wild Animal</a></li>
 					<li><a href="#">Create Location</a></li>
 					<li><a href="#">Create a Sighting</a></li>
-					<li><a href="#">Create a Ranger</a></li>
+					<li><a href="/wildlifeRanger/new">Create a Ranger</a></li>
 				</ul>
 			</li>
 			<li><a href="#">Blog</a></li>
@@ -154,57 +154,29 @@ body {
 </nav>
 <div class="container">
 <div class="jumbotron">
-    <h2>CREATE A SQUAD TO PUT YOUR NEW HERO</h2>
-    <form action="/squad" method="post">
-        <div class="form-group">
-            <label for="squadName">Name</label>
-            <input type="text" class="form-control" name="squadName" id="squadName" placeholder="Name of the squad" required>
-        </div>
+    <h2>CREATE A RANGER</h2>
+       <form action="/wildlifeRanger" method="post">
+           <div class="form-group">
+               <label for="rangerName">Name</label>
+               <input type="text" class="form-control" name="rangerName" id="rangerName" placeholder="Name of the Ranger" required>
+           </div>
 
-        <div class="form-group">
-            <label for="squadPurpose">Cause</label>
-            <input type="text" class="form-control" name="squadPurpose" id="squadPurpose" placeholder="What does this squad fight against?" required>
-        </div>
+           <div class="form-group">
+               <label for="rangerTag">Tag Number</label>
+               <input type="number" class="form-control" name="rangerTag" id="rangerTag" placeholder="What is the Tag of this Ranger?" required>
+           </div>
 
-        <div class="form-group">
-            <label for="squadSize">Size Limit</label>
-            <input type="number" class="form-control" name="squadSize" id="squadSize" placeholder="How many heroes should be in this squad?" required>
-        </div>
+           <div class="form-group">
+               <label for="rangerPhone">Phone Number</label>
+               <input type="number" class="form-control" name="rangerPhone" id="squadSize" placeholder="Phone Number Of the Ranger" required>
+           </div>
 
-        <div class="form-group">
-            <label for="squadHero">Available Heroes</label>
+           <div class="form-group">
+                  <label for="rangerEmail">Email Address</label>
+                  <input type="text" class="form-control" name="rangerEmail" id="rangerEmail" placeholder="What is your Email Address" required>
+           </div>
 
-            {{#if hero}}
-                {{#each hero}}
-                    {{#if squadMember}}
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="squadHero" id={{id}} value={{id}} disabled>
-                            <label class="form-check-label" for="squadHero">
-                                {{name}}
-                            </label>
-                        </div>
-
-                    {{else}}
-
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="squadHero" id={{id}} value={{id}}>
-                            <label class="form-check-label" for="squadHero">
-                                {{name}}
-                            </label>
-                        </div>
-
-                    {{/if}}
-
-                {{/each}}
-            {{else}}
-
-                <p>Oops, it appears there aren't enough heroes. Create more heroes <a href="/hero/new" style="text-decoration: none;">here</a>.</p>
-
-            {{/if}}
-        </div>
-
-        <button type="submit" class="btn btn-info my-2 my-sm-0">Create Squad</button>
+           <button type="submit" class="btn btn-info my-2 my-sm-0">Create Ranger</button>
 </div>
 </div>
 </body>
