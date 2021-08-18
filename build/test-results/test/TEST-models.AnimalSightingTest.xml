@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.AnimalSightingTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-18T18:23:01" hostname="karuu-HP-EliteBook-8470p" time="0.041">
+  <properties/>
+  <testcase name="GetRangerIdInstantiatesCorrectly_int()" classname="models.AnimalSightingTest" time="0.033"/>
+  <testcase name="GetAndInstantiatesAllObjectsTrueAndCorrectly()" classname="models.AnimalSightingTest" time="0.002"/>
+  <testcase name="GetLocationOfAnimalByIdReturnsCorrectly()" classname="models.AnimalSightingTest" time="0.002"/>
+  <testcase name="GetAnimalWhereaboutsByIdReturnsCorrectly()" classname="models.AnimalSightingTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
