@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.EndangeredAnimalTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-18T19:35:57" hostname="karuu-HP-EliteBook-8470p" time="0.012">
+  <properties/>
+  <testcase name="GetAgeOfEndangeredAnimalInstantiatesCorrectly_true()" classname="models.EndangeredAnimalTest" time="0.002"/>
+  <testcase name="GetObjectsInstantiatesCorrectly_true()" classname="models.EndangeredAnimalTest" time="0.001"/>
+  <testcase name="GetNameOfEndangeredAnimalInstantiatesStringNameCorrectly()" classname="models.EndangeredAnimalTest" time="0.002"/>
+  <testcase name="GetHealthOfEndangeredAnimalInstantiatesCorrectly_true()" classname="models.EndangeredAnimalTest" time="0.001"/>
+  <testcase name="GetIdOfEndangeredAnimalInstantiatesCorrectly_true()" classname="models.EndangeredAnimalTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

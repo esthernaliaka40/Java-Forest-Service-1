@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="models.RangerAnimalTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-08-18T19:35:57" hostname="karuu-HP-EliteBook-8470p" time="0.02">
+  <properties/>
+  <testcase name="GetRangerStringNameAndInstantiateCorrectly()" classname="models.RangerAnimalTest" time="0.003"/>
+  <testcase name="GetRangerIntTagNumberInstantiatesCorrectly()" classname="models.RangerAnimalTest" time="0.002"/>
+  <testcase name="GetEmailOfRangerInstantiatesCorrectlyReturns_true()" classname="models.RangerAnimalTest" time="0.002"/>
+  <testcase name="GetRangersContactNoAndInstantiatesCorrectly_true()" classname="models.RangerAnimalTest" time="0.002"/>
+  <testcase name="GetInstantiatesObjectsTrueCorrectly()" classname="models.RangerAnimalTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
