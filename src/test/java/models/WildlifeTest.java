@@ -35,7 +35,7 @@ class WildlifeTest {
     }
 
     @Test
-    void GetAgeOfWildlfieAnimalInstantiatesCoreectly_true() {
+    void GetAgeOfWildlifeAnimalInstantiatesCoreectly_true() {
         Wildlife testWildlife = setupWildlife();
         assertEquals("Young", testWildlife.getAge());
     }
