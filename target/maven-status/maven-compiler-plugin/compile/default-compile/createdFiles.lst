@@ -1,0 +1,7 @@
+models/RangerAnimal.class
+App.class
+models/AnimalLocation.class
+models/EndangeredAnimal.class
+models/Wildlife.class
+models/AnimalSighting.class
+models/DB.class

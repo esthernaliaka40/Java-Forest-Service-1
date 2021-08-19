@@ -12,7 +12,7 @@ This project was developed by Brian Karu.
 Click on [Karuu](https://github.com/Karuu-01) to find the link to my Github Site.
 
 ## Demo
-Here is a working live demo :
+Here is a working live demo :https://java-forest-service.herokuapp.com/
 
 ## Set Up Instructions
 
