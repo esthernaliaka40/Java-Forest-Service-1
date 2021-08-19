@@ -15,6 +15,20 @@ Click on [Karuu](https://github.com/Karuu-01) to find the link to my Github Site
 Here is a working live demo :
 
 ## Set Up Instructions
+
+## Database Set Up Instructions
+- Run psql in the project terminal.
+- Type the command: CREATE DATABASE wildlife_tracker;
+- Navigate into the database by typing the command: \c wildlife_tracker;
+Create tables by running following commands:
+- 1.CREATE TABLE RangerAnimal (id serial PRIMARY KEY, name VARC
+   HAR, tag INT, phone INT, email VARCHAR);
+- 2.CREATE TABLE Wildlife (id serial PRIMARY KEY, name VARCHAR,health VARCHAR, age VARCHAR);
+- 3.CREATE TABLE EndangeredAnimal(id serial PRIMARY KEY, name VARCHAR, health VARCHAR, age VARCHAR);
+- 4.CREATE TABLE AnimalLocation (id serial PRIMARY KEY, name VARCHAR);
+- 5.CREATE TABLE AnimalSighting (id SERIAL PRIMARY KEY, animalId INT, rangerId INT, locationId INT, time TIMESTAMP);
+- Create a test database by typing the command: CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
+
 ### To set up this project:
 
 - Clone the repository by executing the following command in your terminal in the directory of your choice - git clone https://github.com/Karuu-01/Java-Forest-Service
