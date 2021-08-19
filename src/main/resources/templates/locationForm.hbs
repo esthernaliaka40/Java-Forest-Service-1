@@ -131,15 +131,23 @@ body {
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Create <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Create A Wild Animal</a></li>
+					<li><a href="/wildlife/new">Create A Wild Animal</a></li>
 					<li><a href="animalLocation">Create Location</a></li>
 					<li><a href="#">Create a Sighting</a></li>
 					<li><a href="/wildlifeRanger/new">Create a Ranger</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Blog</a></li>
+			<li class="dropdown">
+                        				<a data-toggle="dropdown" class="dropdown-toggle" href="#">View <b class="caret"></b></a>
+                        				<ul class="dropdown-menu">
+                        					<li><a href="/wildlife/new">View Animals</a></li>
+                        					<li><a href="/animalLocation">View Spotted Locations</a></li>
+                        					<li><a href="#">View Sighting</a></li>
+                        					<li><a href="/wildlifeRanger/new">View Ranger</a></li>
+                        				</ul>
+                        			</li>
 			<li><a href="#">Contact</a></li>
 		</ul>
 		<form class="navbar-form form-inline navbar-right ml-auto">
@@ -164,13 +172,18 @@ body {
                             <h3 class="dark-grey-text mb-5"><strong>Location Where Animal was Spotted</strong></h3>
                         </div>
 
-                        <div class="md-form">
-                            <label for="location">Location name</label>
-                            <input type="text" name="location" id="location" class="form-control" placeholder="Eg Zone A" required>
+                        <div class="form-group row2">
+                            <label for="location">Select Location Animal was spotted</label>
+                            <select id="location" class="form-control" placeholder="Example: Zone A" required >
+                            <option>Zone A</option>
+                              <option>Zone B</option>
+                                <option>Zone C</option>
+                                  <option>Zone D</option>
+                               </select>
                         </div>
 
-                        <div class="text-center mb-3">
-                            <button type="submit" class="btn btn-light btn-block locationSubmit">Submit</button>
+                        <div>
+                            <button type="submit" class="btn btn-primary btn-block locationSubmit">Submit</button>
                         </div>
                     </div>
 

@@ -131,15 +131,23 @@ body {
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 			<li class="dropdown">
-				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Services <b class="caret"></b></a>
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Create <b class="caret"></b></a>
 				<ul class="dropdown-menu">
-					<li><a href="#">Create A Wild Animal</a></li>
+					<li><a href="wildlife/new">Create A Wild Animal</a></li>
 					<li><a href="/animalLocation">Create Location</a></li>
 					<li><a href="#">Create a Sighting</a></li>
 					<li><a href="/wildlifeRanger/new">Create a Ranger</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Blog</a></li>
+			<li class="dropdown">
+                                    				<a data-toggle="dropdown" class="dropdown-toggle" href="#">View <b class="caret"></b></a>
+                                    				<ul class="dropdown-menu">
+                                    					<li><a href="/wildlife/new">View Animals</a></li>
+                                    					<li><a href="/animalLocation">View Spotted Locations</a></li>
+                                    					<li><a href="#">View Sighting</a></li>
+                                    					<li><a href="/wildlifeRanger/new">View Ranger</a></li>
+                                    				</ul>
+                                    			</li>
 			<li><a href="#">Contact</a></li>
 		</ul>
 		<form class="navbar-form form-inline navbar-right ml-auto">
@@ -154,29 +162,55 @@ body {
 </nav>
 <div class="container">
 <div class="jumbotron">
-     <h2>CREATE A RANGER</h2>
-        <form action="/wildlifeRanger" method="post">
+     <h2>ANIMALS PRESENT IN THE RESERVE</h2>
+     <div class="text-center">
+                             <h3 class="dark-grey-text mb-5"><strong>What Kind Of Animal Did you Spot?</strong></h3>
+                         </div>
+
+                         <div class="form-check form-check-inline">
+                             <input class="form-check-input" type="radio" name="type" id="common" value="common" onclick="animal(0)">
+                             <label class="form-check-label" for="type">Common Species</label>
+                         </div>
+
+                         <div class="form-check form-check-inline">
+                             <input class="form-check-input" type="radio" name="type" id="endangered" value="endangered"  onclick="animal(1)">
+                             <label class="form-check -label" for="type">Endangered Species</label>
+                         </div>
+
+        <form action="/wildlife/new" method="post">
             <div class="form-group">
-                <label for="rangerName">Name</label>
-                <input type="text" class="form-control" name="rangerName" id="rangerName" placeholder="Name of the Ranger" required>
+                <label for="wildlifeName">Name</label>
+                <input type="text" class="form-control" name="wildlifeName" id="rangerName" placeholder="Name of the Animal" required>
             </div>
 
             <div class="form-group">
-                <label for="rangerTag">Tag Number</label>
-                <input type="number" class="form-control" name="rangerTag" id="rangerTag" placeholder="What is the Tag of this Ranger?" required>
+                <label for="wildlifeAge">Age Of The Animal</label>
+                <input type="number" class="form-control" name="wildlifeAge" id="rangerTag" placeholder="What is the Age of the animal?" required>
             </div>
 
             <div class="form-group">
-                <label for="rangerPhone">Phone Number</label>
-                <input type="number" class="form-control" name="rangerPhone" id="squadSize" placeholder="Phone Number Of the Ranger" required>
+            <label for"wildlife">What is the Health Of the Animal</label>
+            <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="wildlifeHealth" id="wildlifeHealth" value="common" onclick="animal(0)">
+                  <label class="form-check-label" for="wildlifeHealth">Healthy</label>
             </div>
 
-            <div class="form-group">
-                   <label for="rangerEmail">Email Address</label>
-                   <input type="text" class="form-control" name="rangerEmail" id="rangerEmail" placeholder="What is your Email Address" required>
-            </div>
+             <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="wildlifeHealth" id="wildlifeHealth" value="common" onclick="animal(0)">
+                              <label class="form-check-label" for="wildlifeHealth">Okay</label>
+                        </div>
 
-            <button type="submit" class="btn btn-info my-2 my-sm-0">Create Ranger</button>
+                         <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="wildlifeHealth" id="wildlifeHealth" value="common" onclick="animal(0)">
+                                          <label class="form-check-label" for="wildlifeHealth">Pale</label>
+                                    </div>
+                                    </div>
+
+
+
+
+
+            <button type="submit" class="btn btn-info my-2 my-sm-0">Create Animal</button>
 </div>
 </div>
 </body>
