@@ -37,7 +37,7 @@ class AnimalSightingTest {
     @Test
     void GetRangerNameInstantiatesCorrectly() {
         AnimalSighting testSighting = setupSighting();
-        assertEquals("Rob", testSighting.getAnimalRangerName());
+        assertEquals("Robb", testSighting.getAnimalRangerName());
     }
 
     @Test
@@ -49,34 +49,16 @@ class AnimalSightingTest {
     @Test
     void GetAgeOfAnimalSpotted () {
         AnimalSighting testSighting = setupSighting();
-        assertEquals("newborn", testSighting.getAge());
+        assertEquals("Newborn", testSighting.getAge());
     }
 
     @Test
     void GetSpeciesOfAnimalInstantiatesCorrectly() {
         AnimalSighting testSighting = setupSighting();
-        assertEquals("endangered", testSighting.getSpecies());
-    }
-
-    @Test
-    void GetRangerIdInstantiatesCorrectly_int() {
-        AnimalSighting testSighting = setupSighting();
-        assertEquals(1, testSighting.getRangerId());
-    }
-
-    @Test
-    void GetAnimalWhereaboutsByIdReturnsCorrectly() {
-        AnimalSighting testSighting = setupSighting();
-        assertEquals(1, testSighting.getAnimalId());
-    }
-
-    @Test
-    void GetLocationOfAnimalByIdReturnsCorrectly() {
-        AnimalSighting testSighting = setupSighting();
-        assertEquals(1, testSighting.getLocationId());
+        assertEquals("Endangered", testSighting.getSpecies());
     }
 
     public AnimalSighting setupSighting() {
-        return new AnimalSighting("Robb", "Cheetah", "Okay", "Newborn", "Endangered", "Zone A");
+        return new AnimalSighting("Robb", "Lion", "Okay", "Newborn", "Endangered", "Zone A");
     }
 }

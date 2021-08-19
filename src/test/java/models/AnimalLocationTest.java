@@ -31,10 +31,10 @@ class AnimalLocationTest {
     @Test
     void GetIdOfAreaOfLocation() {
         AnimalLocation testLocation = setupLocation();
-        assertEquals(0, testLocation.getId());
+        assertEquals(2, testLocation.getId());
     }
 
     public AnimalLocation setupLocation() {
-        return new AnimalLocation("Zone A", 1);
+        return new AnimalLocation("Zone A", 0);
     }
 }
