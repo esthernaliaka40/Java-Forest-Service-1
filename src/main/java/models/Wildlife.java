@@ -1,5 +1,6 @@
 package models;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Wildlife {
@@ -11,6 +12,10 @@ public class Wildlife {
         this.name = name;
         this.health = health;
         this.age = age;
+    }
+
+    public Wildlife(String name) {
+        this.name = name;
     }
 
     @Override
@@ -48,5 +53,9 @@ public class Wildlife {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+
+    public void save() {
     }
 }

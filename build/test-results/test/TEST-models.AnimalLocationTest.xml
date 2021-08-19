@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="models.AnimalLocationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-18T19:35:57" hostname="karuu-HP-EliteBook-8470p" time="0.055">
+<testsuite name="models.AnimalLocationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-08-19T02:08:25" hostname="karuu-HP-EliteBook-8470p" time="0.071">
   <properties/>
-  <testcase name="GetsStringNameOfLocationCorrectly()" classname="models.AnimalLocationTest" time="0.049"/>
-  <testcase name="GetIdOfAreaOfLocation()" classname="models.AnimalLocationTest" time="0.001"/>
+  <testcase name="GetsStringNameOfLocationCorrectly()" classname="models.AnimalLocationTest" time="0.064"/>
+  <testcase name="GetIdOfAreaOfLocation()" classname="models.AnimalLocationTest" time="0.002"/>
   <testcase name="GetsLocationInstantiatesCorrectly()" classname="models.AnimalLocationTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

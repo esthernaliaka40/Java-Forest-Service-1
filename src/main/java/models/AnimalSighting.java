@@ -1,22 +1,53 @@
 package models;
 
+import org.sql2o.Connection;
+
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class AnimalSighting {
 
     private int id;
+    private String location;
+    private String animalRangerName;
+    private String name;
+    private String health;
+    private String age;
+    private String species;
     private int animalId;
     private int rangerId;
     private int locationId;
     private Date date = new Date();
     private Timestamp time;
 
-    public AnimalSighting(int animalId,  int rangerId, int locationId) {
+    public AnimalSighting(int animalId,  int rangerId, int locationId, String animalRangerName, String name, String health, String age, String species, String location) {
         this.animalId = animalId;
         this.rangerId = rangerId;
         this.locationId =locationId;
+        this.animalRangerName = animalRangerName;
+        this.age = age;
+        this.health = health;
+        this.species = species;
+        this.location = location;
+        this.name = name;
+    }
+
+    public AnimalSighting(int id, String location, String animalRangerName) {
+        this.id = id;
+        this.location = location;
+        this.animalRangerName = animalRangerName;
+    }
+
+    public AnimalSighting(String name, String location, String animalRangerName) {
+    }
+
+    public static List<AnimalSighting> getAll() {
+        String sql = "SELECT * FROM AnimalSighting";
+        try (Connection con = DB.sql2o.open()){
+            return con.createQuery(sql).executeAndFetch(AnimalSighting.class);
+        }
     }
 
     @Override
@@ -78,5 +109,57 @@ public class AnimalSighting {
 
     public void setTime(Timestamp time) {
         this.time = time;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getAnimalRangerName() {
+        return animalRangerName;
+    }
+
+    public void setAnimalRangerName(String animalRangerName) {
+        this.animalRangerName = animalRangerName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getHealth() {
+        return health;
+    }
+
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+    
+
+    public void save() {
     }
 }

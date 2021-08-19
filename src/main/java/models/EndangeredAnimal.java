@@ -1,5 +1,8 @@
 package models;
 
+import org.sql2o.Connection;
+
+import java.util.List;
 import java.util.Objects;
 
 public class EndangeredAnimal {
@@ -14,6 +17,22 @@ public class EndangeredAnimal {
         this.health = health;
         this.age = age;
     }
+
+    public EndangeredAnimal(String name, String health, String age) {
+        this.name = name;
+        this.age = age;
+        this.health = health;
+    }
+
+    public static List<EndangeredAnimal> all() {
+        String sql = "SELECT * FROM wildlife_tracker";
+        try(Connection conn = DB.sql2o.open()) {
+            return conn.createQuery(sql)
+                    .executeAndFetch(EndangeredAnimal.class);
+
+        }
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -58,5 +77,8 @@ public class EndangeredAnimal {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public void save() {
     }
 }
