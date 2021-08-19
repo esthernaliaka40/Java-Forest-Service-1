@@ -3,6 +3,7 @@ package models;
 import org.sql2o.Connection;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -16,31 +17,19 @@ public class AnimalSighting {
     private String health;
     private String age;
     private String species;
-    private int animalId;
-    private int rangerId;
-    private int locationId;
     private Date date = new Date();
     private Timestamp time;
+    private static ArrayList<AnimalSighting> instances = new ArrayList<>();
 
-    public AnimalSighting(int animalId,  int rangerId, int locationId, String animalRangerName, String name, String health, String age, String species, String location) {
-        this.animalId = animalId;
-        this.rangerId = rangerId;
-        this.locationId =locationId;
+    public AnimalSighting(String animalRangerName, String name, String health, String age, String species, String location) {
         this.animalRangerName = animalRangerName;
         this.age = age;
         this.health = health;
         this.species = species;
         this.location = location;
         this.name = name;
-    }
-
-    public AnimalSighting(int id, String location, String animalRangerName) {
-        this.id = id;
-        this.location = location;
-        this.animalRangerName = animalRangerName;
-    }
-
-    public AnimalSighting(String name, String location, String animalRangerName) {
+        instances.add(this);
+        this.id=instances.size();
     }
 
     public static List<AnimalSighting> getAll() {
@@ -50,17 +39,21 @@ public class AnimalSighting {
         }
     }
 
+    public static ArrayList<AnimalSighting> getAllInstances() {
+        return instances;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        AnimalSighting testSighting = (AnimalSighting) o;
-        return id == testSighting.id && rangerId == testSighting.rangerId && animalId == testSighting.animalId && locationId == testSighting.locationId && date.equals(testSighting.date) && time.equals(testSighting.time);
+        if (!(o instanceof AnimalSighting)) return false;
+        AnimalSighting that = (AnimalSighting) o;
+        return getId() == that.getId() && Objects.equals(getLocation(), that.getLocation()) && Objects.equals(getAnimalRangerName(), that.getAnimalRangerName()) && Objects.equals(getName(), that.getName()) && Objects.equals(getHealth(), that.getHealth()) && Objects.equals(getAge(), that.getAge()) && Objects.equals(getSpecies(), that.getSpecies()) && Objects.equals(getDate(), that.getDate()) && Objects.equals(getTime(), that.getTime());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, rangerId, animalId, locationId, date, time);
+        return Objects.hash(getId(), getLocation(), getAnimalRangerName(), getName(), getHealth(), getAge(), getSpecies(), getDate(), getTime());
     }
 
     public int getId() {
@@ -71,29 +64,6 @@ public class AnimalSighting {
         this.id = id;
     }
 
-    public int getAnimalId() {
-        return animalId;
-    }
-
-    public void setAnimalId(int animalId) {
-        this.animalId = animalId;
-    }
-
-    public int getRangerId() {
-        return rangerId;
-    }
-
-    public void setRangerId(int rangerId) {
-        this.rangerId = rangerId;
-    }
-
-    public int getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
 
     public Date getDate() {
         return date;

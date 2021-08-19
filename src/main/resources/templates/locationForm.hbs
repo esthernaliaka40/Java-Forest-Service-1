@@ -134,7 +134,7 @@ body {
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Create <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="/wildlife/new">Create A Wild Animal</a></li>
-					<li><a href="animalLocation">Create Location</a></li>
+					<li><a href="animalLocation/new">Create Location</a></li>
 					<li><a href="/animalSighting/new">Create a Sighting</a></li>
 					<li><a href="/wildlifeRanger/new">Create a Ranger</a></li>
 				</ul>
@@ -145,7 +145,7 @@ body {
                         					<li><a href="/wildlife/new">View Animals</a></li>
                         					<li><a href="/animalLocation">View Spotted Locations</a></li>
                         					<li><a href="/animalSighting">View Sighting</a></li>
-                        					<li><a href="/wildlifeRanger/new">View Ranger</a></li>
+                        					<li><a href="/wildlifeRanger">View Ranger</a></li>
                         				</ul>
                         			</li>
 			<li><a href="#">Contact</a></li>
@@ -173,14 +173,19 @@ body {
                         </div>
 
                         <div class="form-group row2">
-                            <label for="location">Select Location Animal was spotted</label>
-                            <select id="location" class="form-control" placeholder="Example: Zone A" required >
+                            <label for="locationName">Select Location Animal was spotted</label>
+                            <select id="locationId" class="form-control" placeholder="Example: Zone A" required >
                             <option>Zone A</option>
                               <option>Zone B</option>
                                 <option>Zone C</option>
                                   <option>Zone D</option>
                                </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for="locationId">Location Id</label>
+                             <input type="number" class="form-control" name="locationId" id="locationId" placeholder="What is your Tag" required>
+                                              </div>
 
                         <div>
                             <button type="submit" class="btn btn-primary btn-block locationSubmit">Submit</button>

@@ -1,13 +1,22 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class AnimalLocation {
   private String name;
   private int id;
+  private static ArrayList<AnimalLocation> instances = new ArrayList<>();
 
-    public AnimalLocation(String name) {
+    public AnimalLocation(String name, int id) {
         this.name = name;
+        this.id = id;
+        instances.add(this);
+        this.id=instances.size();
+    }
+
+    public static ArrayList<AnimalLocation> getAllInstances() {
+        return  instances;
     }
 
     public String getName() {

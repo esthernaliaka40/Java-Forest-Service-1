@@ -77,6 +77,6 @@ class AnimalSightingTest {
     }
 
     public AnimalSighting setupSighting() {
-        return new AnimalSighting(1,1,1, "Robb", "Cheetah", "Okay", "Newborn", "Endangered", "Zone A");
+        return new AnimalSighting("Robb", "Cheetah", "Okay", "Newborn", "Endangered", "Zone A");
     }
 }

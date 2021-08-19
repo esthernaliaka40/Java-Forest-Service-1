@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class RangerAnimal {
@@ -7,12 +8,25 @@ public class RangerAnimal {
     private int tag;
     private int phone;
     private String email;
+    private static ArrayList<RangerAnimal> instances = new ArrayList<>();
+    private int id;
 
     public RangerAnimal(String name, int tag, int phone, String email) {
         this.name = name;
         this.tag = tag;
         this.phone = phone;
         this.email = email;
+        instances.add(this);
+        this.id=instances.size();
+    }
+
+    public static ArrayList<RangerAnimal> getAllInstances() {
+        return instances;
+    }
+
+
+    public int getId() {
+        return id;
     }
 
     @Override

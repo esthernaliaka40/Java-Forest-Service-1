@@ -134,7 +134,7 @@ body {
 				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Create <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li><a href="/wildlife/new">Create A Wild Animal</a></li>
-					<li><a href="/animalLocation">Create Location</a></li>
+					<li><a href="/animalLocation/new">Create Location</a></li>
 					<li><a href="animalSighting/new">Create a Sighting</a></li>
 					<li><a href="/wildlifeRanger/new">Create a Ranger</a></li>
 				</ul>
@@ -142,10 +142,10 @@ body {
 			<li class="dropdown">
             				<a data-toggle="dropdown" class="dropdown-toggle" href="#">View <b class="caret"></b></a>
             				<ul class="dropdown-menu">
-            					<li><a href="/wildlife/new">View Animals</a></li>
+            					<li><a href="/wildlife">View Animals</a></li>
             					<li><a href="/animalLocation">View Spotted Locations</a></li>
             					<li><a href="/animalSighting">View Sighting</a></li>
-            					<li><a href="/wildlifeRanger/new">View Ranger</a></li>
+            					<li><a href="/wildlifeRanger">View Ranger</a></li>
             				</ul>
             			</li>
 			<li><a href="#">Contact</a></li>
@@ -165,12 +165,12 @@ body {
     <h2>CREATE A SIGHTING OF ANIMAL SPOTTED</h2>
        <form action="/animalSighting" method="post">
            <div class="form-group">
-               <label for="name">Name</label>
-               <input type="text" class="form-control" name="name" id="name" placeholder="Name of the Animal Spotted" required>
+               <label for="animalName">Name</label>
+               <input type="text" class="form-control" name="animalName" id="animalName" placeholder="Name of the Animal Spotted" required>
            </div>
           <div class="form-group row2">
-             <label for="location">Select Location Animal was spotted</label>
-              <select id="location" class="form-control" placeholder="Example: Zone A" required >
+             <label for="sightingLocation">Select Location Animal was spotted</label>
+              <select id="sightingLocation" class="form-control" placeholder="Example: Zone A" required >
               <option>Zone A</option>
               <option>Zone B</option>
               <option>Zone C</option>
@@ -179,8 +179,8 @@ body {
           </div>
 
            <div class="form-group row2">
-                       <label for="age">Select Age of Animal was spotted</label>
-                        <select id="age" class="form-control" placeholder="Young" required >
+                       <label for="sightingAge">Select Age of Animal was spotted</label>
+                        <select id="sightingAge" class="form-control" placeholder="Young" required >
                         <option>Young</option>
                         <option>Newborn</option>
                         <option>Old</option>
@@ -189,27 +189,27 @@ body {
                     </div>
 
              <div class="form-group">
-                      <label for"wildlife">What is the Health Of the Animal</label>
+                      <label for="sightingHealth">What is the Health Of the Animal</label>
                       <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="health" id="health" value="common" onclick="animal(0)">
-                            <label class="form-check-label" for="health">Healthy</label>
+                            <input class="form-check-input" type="radio" name="sightingHealth" id="sightingHealth" value="common" onclick="animal(0)">
+                            <label class="form-check-label" for="sightingHealth">Healthy</label>
                       </div>
 
                        <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="health" id="health" value="common" onclick="animal(0)">
-                                        <label class="form-check-label" for="health">Okay</label>
+                                        <input class="form-check-input" type="radio" name="sightingHealth" id="sightingHealth" value="common" onclick="animal(0)">
+                                        <label class="form-check-label" for="sightingHealth">Okay</label>
                                   </div>
 
                                    <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="health" id="health" value="common" onclick="animal(0)">
-                                                    <label class="form-check-label" for="health">Pale</label>
+                                                    <input class="form-check-input" type="radio" name="sightingHealth" id="sightingHealth" value="common" onclick="animal(0)">
+                                                    <label class="form-check-label" for="sightingHealth">Pale</label>
                                               </div>
                                               </div>
 
 
            <div class="form-group">
-                  <label for="animalRangerName">Ranger Name</label>
-                  <input type="text" class="form-control" name="animalRangerName" id="animalRangerName" placeholder="What is your Name" required>
+                  <label for="sightingRangerName">Ranger Name</label>
+                  <input type="text" class="form-control" name="sightingRangerName" id="sightingRangerName" placeholder="What is your Name" required>
            </div>
 
              <div class="form-group">

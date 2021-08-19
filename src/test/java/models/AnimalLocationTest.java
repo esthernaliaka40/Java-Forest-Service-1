@@ -35,6 +35,6 @@ class AnimalLocationTest {
     }
 
     public AnimalLocation setupLocation() {
-        return new AnimalLocation("Zone A");
+        return new AnimalLocation("Zone A", 1);
     }
 }
