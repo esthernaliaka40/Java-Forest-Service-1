@@ -3,6 +3,8 @@ import  java.util.Map;
 import java.util.HashMap;
 import java.util.Objects;
 
+import Dao.AnimalLocationDao;
+import models.AnimalLocation;
 import models.RangerAnimal;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -42,5 +44,22 @@ public class App {
             return new ModelAndView(model, "Wildliferangerform.hbs");
         }, new HandlebarsTemplateEngine());
 
+
+        //Location of animal
+        //Get a location
+        get("/animallocation", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "locationForm.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //Post location where animal was spotted
+        post("/animalLocation", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            String name = request.queryParams("location");
+            AnimalLocation testLocation = new AnimalLocation(name);
+//            AnimalLocationDao.add(testLocation);
+            model.put("location", testLocation);
+            return new ModelAndView(model, "location.hbs");
+        });
     }
 }
